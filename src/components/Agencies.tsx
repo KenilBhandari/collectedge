@@ -1,5 +1,4 @@
-import React from 'react';
-import { MessageSquare, LayoutGrid, Search, CheckCircle2 } from 'lucide-react';
+import { LayoutGrid, Search } from 'lucide-react';
 
 const PixelPerfectAgencies = () => {
   return (
