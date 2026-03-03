@@ -1,12 +1,4 @@
-import { useState, useEffect } from "react";
-
 export default function HeroPage() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-
   const logos = [
   "brand_1.png",
   "brand_2.png",
@@ -100,8 +92,15 @@ export default function HeroPage() {
           <div className="flex items-center justify-center pb-10 ">
             <div className="mx-auto px-6 flex items-center justify-between gap-12 isolate">
               {/* LEFT SIDE */}
-              <div className="flex flex-col gap-8 w-72 relative z-0 ">
+              <div className="flex flex-col gap-8 w-72 relative">
                 <div className="w-fit h-fit -translate-x-8 rotate-[9.38deg] bg-transparent rounded-4xl z-40 border-transparent">
+                  <span className="bg-white p-4 z-10 translate-y-14 translate-x-60 absolute rounded-4xl">
+                    <img
+                      src="op_meter.png"
+                      className="rounded-2xl h-12 w-12 -rotate-12"
+                      alt="AFL services"
+                    />
+                  </span>
                   <img
                     src="operational_health.png"
                     className="rounded-2xl"
@@ -115,6 +114,11 @@ export default function HeroPage() {
                   <img
                     src="AFL_services.png"
                     className="rounded-2xl"
+                    alt="AFL services"
+                  />
+                  <img
+                    src="zap.png"
+                    className="rounded-2xl h-20 w-20 rotate-18 absolute -bottom-10"
                     alt="AFL services"
                   />
                 </div>
@@ -228,7 +232,14 @@ export default function HeroPage() {
               {/* RIGHT SIDE */}
               <div className="flex flex-col gap-8 w-72 h-120 relative z-0 left-12">
                 <div className="w-fit h-fit rotate-[6deg] bg-transparent rounded-4xl z-40 border-transparent">
-                  <img
+                  <span className="bg-white p-4 z-10 absolute rounded-full translate-x-19 -translate-y-14">
+                    <img
+                      src="dollar_meter.png"
+                      className="rounded-2xl h-10 w-10 -rotate-12 "
+                      alt="AFL services"
+                    />
+                  </span>
+                   <img
                     src="interactions.png"
                     className="rounded-2xl"
                     alt="Interactions"
@@ -238,7 +249,14 @@ export default function HeroPage() {
                 <div className="w-80 h-65  absolute -translate-x-12 translate-y-12 -rotate-[12deg] rounded-3xl  bg-white/20 mix-blend-lighten opacity-100 border border-gray-200 shadow-gray-300 shadow-2xl" />
 
                 <div className="absolute  -rotate-[6deg] translate-y-75 translate-x-8 z-50">
-                  <img
+              <span className="bg-white p-2 z-10 absolute rounded-full translate-x-8 -translate-y-10">
+                    <img
+                      src="call_meter.png"
+                      className="rounded-2xl h-10 w-10 rotate-12 "
+                      alt="AFL services"
+                    />
+                  </span>
+                     <img
                     src="gouse_card.png"
                     className="rounded-2xl object-cover"
                     alt="Gouse card"

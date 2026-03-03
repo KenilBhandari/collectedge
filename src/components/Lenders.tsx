@@ -1,5 +1,4 @@
-import React from 'react';
-import { Users, Layers, BarChart3, Search, Settings, Database, Code2, Plus, Zap, CheckCircle2 } from 'lucide-react';
+import type { ReactNode } from 'react';
 
 const LandingPage = () => {
   return (
@@ -159,7 +158,19 @@ const LandingPage = () => {
 
 // --- Reusable Sub-Components ---
 
-const FeatureSection = ({ icon, title, desc, children }:any) => (
+type FeatureSectionProps = {
+  icon: ReactNode;
+  title: ReactNode;
+  desc: string;
+  children: ReactNode;
+};
+
+type AgentCardProps = {
+  src: string;
+  className?: string;
+};
+
+const FeatureSection = ({ icon, title, desc, children }: FeatureSectionProps) => (
   <div className="flex flex-col group w-full">
     <div className="flex items-center gap-3 mb-4">
       <div className="p-1">{icon}</div>
@@ -174,16 +185,9 @@ const FeatureSection = ({ icon, title, desc, children }:any) => (
   </div>
 );
 
-const AgentCard = ({ src, className }: any) => (
+const AgentCard = ({ src, className }: AgentCardProps) => (
   <div className='h-25 flex items-center justify-center w-100'>
     <img src={src} className={`object-cover h-22 ${className}`} alt="avatar" />
-  </div>
-);
-
-const Stat = ({ label, value }:any) => (
-  <div>
-    <p className="text-[12px] font-extrabold text-slate-800 leading-tight">{value}</p>
-    <p className="text-[9px] text-slate-400 font-semibold uppercase tracking-tighter">{label}</p>
   </div>
 );
 
