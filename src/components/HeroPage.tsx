@@ -6,6 +6,16 @@ export default function HeroPage() {
     setMounted(true);
   }, []);
 
+
+  const logos = [
+  "brand_1.png",
+  "brand_2.png",
+  "brand_3.png",
+  "brand_4.png",
+  "brand_5.png",
+  "brand_6.png",
+];
+
   return (
     <>
       <style>{`
@@ -40,8 +50,8 @@ export default function HeroPage() {
         @keyframes blink { 50% { border-color: transparent; } }
       `}</style>
 
-      <div className="font-[inter] min-h-screen w-full bg-[url(/main_bg.png)] bg-cover bg-blend-luminosity relative overflow-hidden">
-        <div className="flex flex-col gap-y-7 max-w-full backdrop-blur-2xl bg-linear-to-tr from-sky-100 via-indigo-50 to-white">
+      <div className="font-[inter] min-h-screen  w-full bg-[url(/main_bg.png)] bg-cover bg-blend-luminosity relative overflow-hidden">
+        <div className="flex flex-col items-center gap-y-10 max-w-full backdrop-blur-2xl bg-linear-to-tr from-[#becbea] via-[#ffffff] to-[#CED5F9]">
           {/* ── NAV ── */}
           <nav className="flex items-center justify-between w-276.5 h-22.75 mx-auto mt-6">
             <div className="flex items-center justify-between w-full h-full bg-white/18 backdrop-blur-[84px] rounded-4xl p-1.5 border border-black/10">
@@ -87,7 +97,7 @@ export default function HeroPage() {
           </nav>
 
           {/* ── HERO ── */}
-          <div className=" pb-16 ">
+          <div className="flex items-center justify-center pb-10 ">
             <div className="mx-auto px-6 flex items-center justify-between gap-12 isolate">
               {/* LEFT SIDE */}
               <div className="flex flex-col gap-8 w-72 relative z-0 ">
@@ -99,7 +109,7 @@ export default function HeroPage() {
                   />
                 </div>
 
-                <div className="w-80 h-74  absolute -translate-x-8 translate-y-12 rounded-3xl  bg-white/80 mix-blend-lighten opacity-100 border border-gray-200 shadow-gray-300 shadow-2xl" />
+                <div className="w-80 h-74  absolute -translate-x-8 translate-y-12 rounded-3xl  bg-white/20 mix-blend-lighten opacity-100 border border-gray-200 " />
 
                 <div className="bg-white rounded-4xl -rotate-[5.27deg] -translate-y-7 border border-gray-100 z-30">
                   <img
@@ -108,7 +118,7 @@ export default function HeroPage() {
                     alt="AFL services"
                   />
                 </div>
-                <div className="w-65 h-60 absolute -translate-x-7 translate-y-87 rounded-3xl  -rotate-[7deg] bg-white/80 mix-blend-lighten opacity-100 border border-gray-200 shadow-gray-300 shadow-xl" />
+                <div className="w-65 h-60 absolute -translate-x-7 translate-y-87 rounded-3xl  -rotate-[7deg] bg-white/20 mix-blend-lighten opacity-100 border border-gray-200" />
               </div>
 
               {/* CENTER CONTENT */}
@@ -187,86 +197,89 @@ export default function HeroPage() {
                 {/* Buttons */}
                 <div className="mt-10 flex gap-6 flex-wrap justify-center">
                   {/* PRIMARY BUTTON */}
-                  <div
-                    className="w-[218px] h-[64px] p-[4px] rounded-[18px] 
-  bg-[linear-gradient(93.37deg,#6095DB_7.39%,#1650EB_99.35%)] 
-  hover:scale-105 active:scale-95 transition-all duration-300"
-                  >
-                    <div
-                      className="w-full h-full flex items-center justify-center gap-2 
-    rounded-[14px] 
-    bg-[linear-gradient(93.66deg,#1952F1_0%,#418DF8_98.87%)]"
-                    >
-                      <span className="text-white font-semibold text-[18px] whitespace-nowrap">
-                        Get free Trial ↗
+
+                  <div className="flex items-center justify-center w-[238px] h-[84px] rounded-3xl border-4 border-[#00000014]">
+                    <div className="w-[218px] h-[64px] p-[4px] rounded-[18px] bg-[linear-gradient(93.37deg,#6095DB_7.39%,#1650EB_99.35%)] hover:scale-103 transition-all duration-300 shadow-[0_40px_60px_rgba(22,80,235,0.5)]">
+                      <div className="w-full h-full flex items-center justify-center gap-2 rounded-[14px] bg-[linear-gradient(93.66deg,#1952F1_0%,#418DF8_98.87%)]">
+                        <span className="text-white font-bold text-[18px] whitespace-nowrap mr-4">
+                          Get free Trial
+                          <span className="absolute -rotate-45 ml-2">➜</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* SECONDARY GLASS BUTTON */}
+                  <div className="flex items-center justify-center w-[238px] h-[84px] rounded-3xl border-4 border-[#00000014]">
+                    <div className="flex items-center justify-center w-[218px] h-[64px] rounded-[18px] border-4 border-[#00000014] bg-white hover:scale-103 transition duration-300">
+                      <span className="text-[#6D6D6D] font-bold text-[18px] whitespace-nowrap flex items-center gap-2">
+                        How We Work
+                        <span className="rotate-45">➜</span>
                       </span>
                     </div>
                   </div>
-
-                  {/* SECONDARY GLASS BUTTON */}
-                  <div
-                    className="w-[218px] h-[64px] flex items-center justify-center 
-    rounded-[18px] backdrop-blur-md 
-    hover:scale-105 active:scale-95 transition-all duration-300"
-                    style={{
-                      background:
-                        "linear-gradient(183.44deg, rgba(202,235,253,0.61) 4.45%, rgba(206,213,249,0.61) 20.94%, rgba(255,255,255,0.61) 38.74%)",
-                    }}
-                  >
-                    <span className="text-[#0F172A] font-semibold text-[18px] whitespace-nowrap">
-                      How We Work ↘
-                    </span>
-                  </div>
                 </div>
+
+                <p className="text-center text-gray-500 text-base translate-y-20">
+                  Join <span className="font-bold text-gray-900">4,000+</span>{" "}
+                  Companies Already Grow
+                </p>
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="flex flex-col gap-8 w-72">
-                <div className="bg-white rounded-2xl shadow-xl p-5 border border-gray-100">
-                  <p className="font-bold text-sm mb-2">
-                    Engagement and outcomes
-                  </p>
-                  <div className="h-24 bg-blue-100 rounded-lg" />
+              <div className="flex flex-col gap-8 w-72 h-120 relative z-0 left-12">
+                <div className="w-fit h-fit rotate-[6deg] bg-transparent rounded-4xl z-40 border-transparent">
+                  <img
+                    src="interactions.png"
+                    className="rounded-2xl"
+                    alt="Interactions"
+                  />
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-4 border border-gray-100">
-                  <p className="font-semibold text-sm">Contact One</p>
-                  <p className="text-xs text-gray-400">+1 000-000-0000</p>
+                <div className="w-80 h-65  absolute -translate-x-12 translate-y-12 -rotate-[12deg] rounded-3xl  bg-white/20 mix-blend-lighten opacity-100 border border-gray-200 shadow-gray-300 shadow-2xl" />
+
+                <div className="absolute  -rotate-[6deg] translate-y-75 translate-x-8 z-50">
+                  <img
+                    src="gouse_card.png"
+                    className="rounded-2xl object-cover"
+                    alt="Gouse card"
+                  />
                 </div>
+
+                <div className="absolute  rotate-[4deg] translate-y-95 translate-x-25 z-20">
+                  <img
+                    src="roger_card.png"
+                    className="rounded-2xl object-cover h-15 w-full"
+                    alt="Operational Health"
+                  />
+                </div>
+                <div className="w-80 h-20  absolute translate-y-95 translate-x-25 rotate-[4deg] rounded-3xl  bg-white/20 mix-blend-lighten opacity-100 border border-gray-200 shadow-gray-300 shadow-2xl" />
               </div>
             </div>
           </div>
 
           {/* ── LOGO TICKER ── */}
-          <div className="mt-16 overflow-hidden">
-            <p className="text-center text-gray-500 text-sm mb-6">
-              Trusted by <span className="font-bold text-gray-900">4,000+</span>{" "}
-              teams
-            </p>
-            <div className="flex gap-16 items-center animate-marquee whitespace-nowrap">
-              {[
-                "Northstar Co.",
-                "Summit Group",
-                "Vertex Labs",
-                "Bluefield Inc.",
-                "Pioneer Works",
-                "Harbor Systems",
-                "Brightline Tech",
-                "Northstar Co.",
-                "Summit Group",
-                "Vertex Labs",
-                "Bluefield Inc.",
-                "Pioneer Works",
-                "Harbor Systems",
-                "Brightline Tech",
-              ].map((logo, i) => (
-                <span
-                  key={i}
-                  className="text-gray-300 font-semibold text-sm tracking-wide shrink-0"
-                >
-                  {logo}
-                </span>
-              ))}
+
+          <div className="relative w-5xl overflow-hidden h-32 flex items-center">
+            {/* LEFT FADE */}
+            <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#d2ddf7] to-transparent z-10 pointer-events-none"></div>
+
+            {/* RIGHT FADE */}
+            <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="w-full overflow-hidden">
+              <div className="flex animate-marquee w-max">
+                {[...logos, ...logos].map((logo, i) => (
+                  <div
+                    key={i}
+                    className="w-[178px] h-10 p-2 rounded-[16px] border border-[#0000001A] flex items-center justify-center shrink-0 mr-24"
+                  >
+                    <img
+                      src={logo}
+                      className="max-h-full max-w-full object-contain"
+                      alt="Brand"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
