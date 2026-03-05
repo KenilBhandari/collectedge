@@ -1,4 +1,4 @@
-import { Mail, MapPin, Zap, Instagram, Facebook, Youtube } from "lucide-react";
+import { Mail, MapPin, Zap } from "lucide-react";
 
 
 export default function ContactPage() {
