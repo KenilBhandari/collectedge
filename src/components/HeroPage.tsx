@@ -38,6 +38,14 @@ export default function HeroPage() {
             animation: slowRotate 3s ease-in-out infinite;
           }
 
+                    @keyframes floating {
+        0% { transform: translate(-0%, -0%) translateY(0px) rotate(0deg); }
+        50% { transform: translate(-0%, -0%) translateY(-12px) rotate(8deg); }
+        100% { transform: translate(-0%, -0%) translateY(0px) rotate(0deg); }
+      }
+
+      .animate-float-slow { animation: floating 2s ease-in-out infinite; }
+
           /* ───────── Text Fill Animations ───────── */
           @keyframes fill-selection {
             0% { width: 0; }
@@ -125,10 +133,10 @@ export default function HeroPage() {
               {/* LEFT SIDE */}
               <div className="flex flex-col gap-8 w-72 relative">
                 <div className="w-fit h-fit -translate-x-8 rotate-[9.38deg] bg-transparent rounded-4xl z-40 border-transparent">
-                  <span className="bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-4 z-10 translate-y-14 translate-x-65 absolute rounded-full">
+                  <span className="bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] animate-float-slow p-4 z-10 translate-y-14 translate-x-65 absolute rounded-full">
                     <img
                       src="op_meter.png"
-                      className="rounded-2xl h-8 w-8 -rotate-[17.5deg] animate-slow-rotate"
+                      className="rounded-2xl h-8 w-8 -rotate-[17.5deg] "
                       alt="AFL services"
                     />
                   </span>
@@ -147,7 +155,7 @@ export default function HeroPage() {
                     className="rounded-2xl"
                     alt="AFL services"
                   />
-                  <span className="flex items-center justify-center bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-1 absolute  rounded-full  -bottom-6 translate-x-6">
+                  <span className="flex items-center animate-float-slow justify-center bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-1 absolute  rounded-full  -bottom-6 translate-x-6">
                     <img
                       src="zap.png"
                       className="h-9 w-9 "
@@ -155,7 +163,7 @@ export default function HeroPage() {
                     />
                   </span>
                 </div>
-                <div className="w-65 h-60 absolute -translate-x-7 translate-y-87 rounded-3xl  -rotate-[7deg] bg-linear-to-r from-[#d0cdcd] via-[#d5d7dd] to-[#ede3e3] opacity-30 border border-gray-300 " />
+                <div className="w-65 h-60 absolute -translate-x-7 translate-y-87 rounded-3xl  -rotate-[7deg] bg-linear-to-r from-[#d3deff] via-[#e3e8f4] to-[#bfd2fa] opacity-30 border border-gray-300 " />
               </div>
 
               {/* CENTER CONTENT */}
@@ -277,7 +285,7 @@ export default function HeroPage() {
               {/* RIGHT SIDE */}
               <div className="flex flex-col gap-8 w-72 h-120 relative z-0 left-12">
                 <div className="w-fit h-fit rotate-[4deg] bg-transparent rounded-4xl z-40 border-transparent">
-                  <span className="flex items-center justify-center bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-2 z-10   h-14 w-14 absolute rounded-full translate-x-19 -translate-y-10">
+                  <span className="flex items-center justify-center animate-float-slow bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-2 z-10   h-14 w-14 absolute rounded-full translate-x-19 -translate-y-10">
                     <img
                       src="dollar_meter.png"
                       className="rounded-full -rotate-12 "
@@ -294,7 +302,7 @@ export default function HeroPage() {
                 <div className="w-80 h-65  absolute -translate-x-12 translate-y-12 -rotate-[12deg] rounded-3xl  bg-white/20 mix-blend-lighten opacity-100 border border-gray-200 shadow-gray-300 shadow-2xl" />
 
                 <div className="absolute  -rotate-[6deg] translate-y-75 translate-x-8 z-50">
-                  <span className="h-14 w-14 bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-2 z-10 absolute rounded-full translate-x-8 -translate-y-10">
+                  <span className="h-14 w-14 animate-float-slow bg-linear-to-r from-[#FFFFFF] via-[#EDEFFA] to-[#FFFFFF] p-2 z-10 absolute rounded-full translate-x-8 -translate-y-10">
                     <img
                       src="call_meter.png"
                       className="rounded-2xl animate-slow-rotate rotate-12 "

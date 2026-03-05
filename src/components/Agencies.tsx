@@ -3,7 +3,7 @@ import { LayoutGrid, Search } from 'lucide-react';
 const PixelPerfectAgencies = () => {
   return (
     <div className="relative min-h-screen w-full font-sans text-[#0a192f] selection:bg-blue-100 overflow-x-hidden">
-      {/* BACKGROUND: Exact Figma Radial Gradient */}
+ 
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
         {/* HEADER */}
